@@ -1,0 +1,19 @@
+#!/bin/bash -e
+source /opt/app-root/etc/clojure_environment
+
+if [ -d /tmp/artifacts/ ]; then
+    echo "---> Restoring build artifacts..."
+    mv -v /tmp/artifacts/* ./
+fi
+
+echo "---> Installing application source ..."
+mv /tmp/src/* ./
+
+echo "---> Installing application deps..."
+lein deps
+
+echo "---> Building application from source..."
+mv "$(lein uberjar | sed -n 's/^Created \(.*standalone\.jar\)/\1/p')" app-standalone.jar
+
+# Fix source directory permissions
+fix-permissions ./

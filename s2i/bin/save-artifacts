@@ -1,0 +1,2 @@
+#!/bin/bash
+tar cf - $(ls -d .m2 2>/dev/null)

@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+NAME="clojure"
+DISPLAY_NAME="Clojure"
+FROM="clojure:lein-%VERSION%"
+TYPE="s2i"
+VARIANTS="default"
+VERSIONS="2.7.1"
+
+DOCKER_PUSH=${DOCKER_PUSH:-"false"}
+
+source $(readlink -zf $(dirname "${BASH_SOURCE[0]}"))/../common/hack/run

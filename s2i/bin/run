@@ -1,0 +1,4 @@
+#!/bin/bash -e
+source /opt/app-root/etc/clojure_environment
+
+exec java -jar app-standalone.jar
