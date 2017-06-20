@@ -11,7 +11,7 @@ IMAGE_NAME=${IMAGE_NAME-ausnimbus/s2i-clojure:2.7.1}
 VERSION=${VERSION-"2.7.1"}
 S2I_ARGS=${S2I_ARGS:-""}
 
-TEST_APPS=()
+TEST_APPS=(clojure-web)
 VERSION_COMMAND="lein version"
 
 extra_tests() {
