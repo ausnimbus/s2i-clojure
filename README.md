@@ -8,10 +8,14 @@ It uses [Leiningen](https://leiningen.org/).
 
 Web processes must bind to port `8080`, and only the HTTP protocol is permitted for incoming connections.
 
-# Environment Variables
+## Environment Variables
 
-- WIP
+The following environment variables are made available:
+
+* **JAVA_OPTS**
+  * Options passed to Java
+  * Default: `-Xmx$((MEMORY_LIMIT-32))m`
 
 # Versions
 
-- 2.7.1
+- 2.7.1 (lein)
