@@ -2,10 +2,10 @@
 
 NAME="clojure"
 DISPLAY_NAME="Clojure"
-FROM="clojure:lein-%VERSION%"
+FROM="clojure:lein"
 TYPE="s2i"
 VARIANTS="default"
-VERSIONS="2.7.1"
+VERSIONS="jdk8"
 
 DOCKER_PUSH=${DOCKER_PUSH:-"false"}
 

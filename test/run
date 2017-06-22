@@ -12,7 +12,7 @@ VERSION=${VERSION-"2.7.1"}
 S2I_ARGS=${S2I_ARGS:-""}
 
 TEST_APPS=(clojure-web)
-VERSION_COMMAND="lein version"
+VERSION_COMMAND="env"
 
 extra_tests() {
   echo ""

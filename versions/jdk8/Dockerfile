@@ -3,15 +3,15 @@
 #
 # DO NOT EDIT IT DIRECTLY.
 #
-FROM clojure:lein-2.7.1
+FROM clojure:lein
 # <pre>
 
 MAINTAINER AusNimbus <support@ausnimbus.com.au>
 
-LABEL summary="Platform for running Clojure 2.7.1 applications" \
+LABEL summary="Platform for running Clojure jdk8 applications" \
       maintainer="AusNimbus <support@ausnimbus.com.au>" \
-      io.k8s.description="Platform for running Clojure 2.7.1 applications" \
-      io.k8s.display-name="Clojure 2.7.1"
+      io.k8s.description="Platform for running Clojure jdk8 applications" \
+      io.k8s.display-name="Clojure jdk8"
 
 ENV USER=999 \
     HOME=/opt/app-root/src
@@ -57,6 +57,8 @@ CMD /usr/bin/base-usage
 # </s2i>
 # <template>
 
+# For test purposes only
+ENV JDK=jdk8
 
 # </template>
 # <post>
