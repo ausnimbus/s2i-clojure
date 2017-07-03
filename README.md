@@ -14,7 +14,7 @@ The following environment variables are made available:
 
 * **JAVA_OPTS**
   * Options passed to Java
-  * Default: `-Xmx$((MEMORY_LIMIT-32))m`
+  * Default: `-Xmx$((MEMORY_LIMIT * 90 / 100))m`
 
 # Versions
 

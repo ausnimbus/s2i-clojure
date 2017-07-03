@@ -11,5 +11,5 @@ shopt -s dotglob
 # this point are group writable.
 umask 002
 
-# Define the maximum memory limit (total_limit - 32MB)
-export JAVA_OPTS=${JAVA_OPTS:-"-Xmx$((MEMORY_LIMIT-32))m"}
+# Define the maximum memory limit (total_limit * 90%)
+export JAVA_OPTS=${JAVA_OPTS:-"-Xmx$((MEMORY_LIMIT * 90 / 100))m"}
