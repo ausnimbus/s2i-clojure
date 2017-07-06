@@ -1,4 +1,10 @@
 #!/bin/bash -e
 source /opt/app-root/etc/clojure_environment
 
-exec java -jar app-standalone.jar
+# APP_RUN defined (eg. rack --host 0.0.0.0 --port 8080)
+if [[ -n "$APP_RUN" ]]; then
+  echo "---> Running application from ($APP_RUN) ..."
+  eval bash -c "$APP_RUN"
+else
+  exec java -jar app-standalone.jar
+fi
