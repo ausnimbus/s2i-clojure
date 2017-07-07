@@ -6,6 +6,18 @@
 
 This document describes the behaviour and environment configuration when running your Clojure apps on AusNimbus.
 
+## Table of Contents
+
+- [Runtime Environments](#runtime-environments)
+- [Web Process](#web-process)
+- [Dependency Management](#dependency-management)
+- [Environment Configuration](#environment-configuration)
+- [Extending](#extending)
+  - [Build Stage (assemble)](#build-stage-assemble)
+  - [Runtime Stage (run)](#runtime-stage-run)
+  - [Persistent Environment Variables](#persistent-environment-variables)
+- [Debug Mode](#debug-mode)
+
 ## Runtime Environments
 
 AusNimbus supports the latest stable Java release.
